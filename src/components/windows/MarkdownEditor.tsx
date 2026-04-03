@@ -1,22 +1,22 @@
-import CodeMirror from '@uiw/react-codemirror';
-import { markdown, markdownLanguage } from '@codemirror/lang-markdown';
-import { languages } from '@codemirror/language-data';
-import { EditorView } from '@codemirror/view';
-import { vscodeDarkInit } from '@uiw/codemirror-theme-vscode';
-import { tags as t } from '@lezer/highlight';
+import CodeMirror from "@uiw/react-codemirror";
+import { markdown, markdownLanguage } from "@codemirror/lang-markdown";
+import { languages } from "@codemirror/language-data";
+import { EditorView } from "@codemirror/view";
+import { vscodeDarkInit } from "@uiw/codemirror-theme-vscode";
+import { tags as t } from "@lezer/highlight";
 
 // Override the pre-built uiw theme's broken Markdown colors
 const markdownTheme = vscodeDarkInit({
   settings: {
-    foreground: '#d4d4d4', // Fixes default text being light blue
+    foreground: "#d4d4d4", // Fixes default text being light blue
   },
   styles: [
-    { tag: t.heading, color: '#569cd6', fontWeight: 'bold' },
-    { tag: t.strong, color: '#569cd6', fontWeight: 'bold' },
-    { tag: t.quote, color: '#6a9955', fontStyle: 'italic' },
-    { tag: t.link, color: '#ce9178' },
-    { tag: t.url, color: '#569cd6', textDecoration: 'underline' },
-  ]
+    { tag: t.heading, color: "#569cd6", fontWeight: "bold" },
+    { tag: t.strong, color: "#569cd6", fontWeight: "bold" },
+    { tag: t.quote, color: "#6a9955", fontStyle: "italic" },
+    { tag: t.link, color: "#ce9178" },
+    { tag: t.url, color: "#569cd6", textDecoration: "underline" },
+  ],
 });
 
 interface MarkdownEditorProps {
@@ -25,7 +25,11 @@ interface MarkdownEditorProps {
   onEditorView?: (view: EditorView) => void;
 }
 
-export default function MarkdownEditor({ value, onChange, onEditorView }: MarkdownEditorProps) {
+export default function MarkdownEditor({
+  value,
+  onChange,
+  onEditorView,
+}: MarkdownEditorProps) {
   return (
     <div className="flex-1 h-full w-full flex flex-col [&>.cm-theme]:flex-1 [&>.cm-theme]:h-full [&>.cm-editor]:h-full [&>.cm-editor]:flex-1 [&_.cm-scroller]:leading-[1.7] [&_.cm-content]:py-4 [&_.cm-gutters]:bg-[#1e1e1e] [&_.cm-gutters]:border-r-0 [&_.cm-gutters]:text-[#858585] [&_.cm-activeLineGutter]:bg-[#2a2d2e] [&_.cm-activeLineGutter]:text-[#c6c6c6] [&_.cm-activeLine]:bg-[#2a2d2e80]">
       <style>{`
@@ -44,7 +48,7 @@ export default function MarkdownEditor({ value, onChange, onEditorView }: Markdo
         theme={markdownTheme}
         extensions={[
           markdown({ base: markdownLanguage, codeLanguages: languages }),
-          EditorView.lineWrapping
+          EditorView.lineWrapping,
         ]}
         onChange={onChange}
         onCreateEditor={(view) => onEditorView?.(view)}
@@ -74,9 +78,10 @@ export default function MarkdownEditor({ value, onChange, onEditorView }: Markdo
           completionKeymap: true,
           lintKeymap: true,
         }}
-        style={{ 
-          fontSize: '15px', 
-          fontFamily: "'Fira Code', 'Cascadia Code', 'Consolas', 'Courier New', monospace" 
+        style={{
+          fontSize: "15px",
+          fontFamily:
+            "'Fira Code', 'Cascadia Code', 'Consolas', 'Courier New', monospace",
         }}
       />
     </div>

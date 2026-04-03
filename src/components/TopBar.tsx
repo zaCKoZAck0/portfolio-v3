@@ -1,4 +1,4 @@
-import { Wifi, Battery, Volume2, ChevronDown } from "lucide-react";
+import { Wifi, Battery, Volume2 } from "lucide-react";
 
 export default function TopBar() {
   const now = new Date();
