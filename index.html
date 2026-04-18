@@ -2,12 +2,51 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- ── Core SEO ───────────────────────────────────────────────────────── -->
+    <title>%SEO_TITLE%</title>
+    <meta name="description" content="%SEO_DESCRIPTION%" />
+    <meta name="keywords" content="%SEO_KEYWORDS%" />
+    <meta name="author" content="zackozack" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="%SEO_THEME_COLOR%" />
+    <link rel="canonical" href="%SEO_URL%" />
+
+    <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+    <meta property="og:type" content="%SEO_OG_TYPE%" />
+    <meta property="og:site_name" content="%SEO_OG_SITE_NAME%" />
+    <meta property="og:title" content="%SEO_TITLE%" />
+    <meta property="og:description" content="%SEO_DESCRIPTION%" />
+    <meta property="og:url" content="%SEO_URL%" />
+    <meta property="og:locale" content="%SEO_LOCALE%" />
+    <meta property="og:image" content="%SEO_OG_IMAGE%" />
+    <meta property="og:image:secure_url" content="%SEO_OG_IMAGE%" />
+    <meta property="og:image:alt" content="%SEO_OG_IMAGE_ALT%" />
+    <meta property="og:image:width" content="%SEO_OG_IMAGE_W%" />
+    <meta property="og:image:height" content="%SEO_OG_IMAGE_H%" />
+
+    <!-- ── Twitter / X ────────────────────────────────────────────────────── -->
+    <meta name="twitter:card" content="%SEO_TW_CARD%" />
+    <meta name="twitter:site" content="%SEO_TW_SITE%" />
+    <meta name="twitter:creator" content="%SEO_TW_HANDLE%" />
+    <meta name="twitter:title" content="%SEO_TITLE%" />
+    <meta name="twitter:description" content="%SEO_DESCRIPTION%" />
+    <meta name="twitter:image" content="%SEO_OG_IMAGE%" />
+    <meta name="twitter:image:alt" content="%SEO_OG_IMAGE_ALT%" />
+
+    <!-- ── Structured data (JSON-LD) ──────────────────────────────────────── -->
+    <script type="application/ld+json">
+%SEO_JSON_LD%
+    </script>
+
+    <!-- ── Assets ─────────────────────────────────────────────────────────── -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.json" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
-    <title>portfolio</title>
   </head>
   <body>
     <div id="root"></div>

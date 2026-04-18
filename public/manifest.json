@@ -1,0 +1,17 @@
+{
+  "name": "zackozack",
+  "short_name": "zackozack",
+  "description": "zackozack's interactive portfolio — an Ubuntu desktop experience.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#2d1b69",
+  "theme_color": "#2d1b69",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any maskable"
+    }
+  ]
+}
