@@ -15,10 +15,9 @@ export const SITE_URL = "https://zackozack.xyz";
 export const SEO = {
   // ---- Core ----------------------------------------------------------------
   title: "zackozack | Software Developer",
-  description:
-    "Portfolio - an Ubuntu desktop experience built with React and Vite.",
+  description: "Portfolio",
   keywords:
-    "zackozack, software developer, portfolio, react, typescript, frontend, full stack, web development",
+    "zackozack, software developer, portfolio, react, aws, typescript, frontend, full stack, web development",
   themeColor: "#2d1b69",
 
   // ---- Canonical & URL -----------------------------------------------------
@@ -31,7 +30,7 @@ export const SEO = {
     siteName: "zackozack",
     // Replace with a real 1200×628 image once you have one.
     image: `${SITE_URL}/og-image.png`,
-    imageAlt: "zackozack portfolio — Ubuntu desktop interface",
+    imageAlt: "zackozack - portfolio",
     imageWidth: "1200",
     imageHeight: "628",
   },
